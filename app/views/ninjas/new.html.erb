@@ -1,0 +1,10 @@
+<%= simple_form_for @ninja do |f| %>
+  <%= f.input :ninja_name, label: "Ninja Name" %>
+  <%= f.input :ninja_description, label: "Ninja Description", as: :text %>
+  <%= f.button :submit, label: 'Create Ninja' %>
+  <% if flash[:alert]%>
+    <%= flash[:alert][:message]%>
+    <%= flash[:alert][:ninja_name] %>
+    <%= flash[:alert][:ninja_description] %>
+  <% end %>
+<% end %>

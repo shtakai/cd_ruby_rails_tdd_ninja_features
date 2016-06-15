@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'ninjas/new' => 'ninjas#new'
+  get 'ninjas/success' => 'ninjas#success'
+  post 'ninjas' => 'ninjas#create'
+  root 'ninjas#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
